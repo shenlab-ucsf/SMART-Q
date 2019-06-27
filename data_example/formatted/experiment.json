@@ -1,0 +1,12 @@
+{
+    "version": "5.0.0",
+    "images": {
+        "primary": "primary_images.json",
+        "nuclei": "nuclei.json",
+        "channel2": "channel2.json",
+        "channel4": "channel4.json",
+        "dots": "dots.json"
+    },
+    "extras": {},
+    "codebook": "codebook.json"
+}

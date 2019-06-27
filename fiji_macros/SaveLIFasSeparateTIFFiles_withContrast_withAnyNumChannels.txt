@@ -1,0 +1,86 @@
+macro "Break up a lif into individual TIFF, then enhance contrast and save them. Also merge DAPI+ch1 and DAPI+ch2" {
+// open the file manager to select a lif file to break it into TIFFs
+// in this case, only the metadata specific to a series will be written
+
+path = File.openDialog("Select a File");
+
+run("Bio-Formats Macro Extensions");
+Ext.setId(path);
+Ext.getCurrentFile(file);
+Ext.getSeriesCount(seriesCount);
+
+slash_index = lastIndexOf(path, "/");
+input_dir = substring(path, 0, slash_index+1);
+out_dir = input_dir + "output/";
+File.makeDirectory(out_dir);
+
+for (s=1; s<=seriesCount; s++) {
+// Bio-Formats Importer uses an argument that can be built by concatenate a set of strings
+	run("Bio-Formats Importer", "open=&path autoscale color_mode=Default view=Hyperstack stack_order=XYCZT series_"+s);
+	out_title = getTitle();
+	if (indexOf(out_title, "Mark_and_Find") >= 0) {
+		out_title = substring(out_title, 0, indexOf(out_title, "Mark_and_Find")) + substring(out_title, indexOf(out_title, "/") + 1);
+	}
+	getDimensions(w, h, channels, slices, frames);
+	txtFileName = out_dir + out_title + " - zplane_num.txt";
+	txt = File.open(txtFileName);
+	print(txt, d2s(slices,0));
+	File.close(txt);
+	run("Split Channels");
+	numNextSlices = slices / 2 - 1;
+	for (ch=channels-1; ch>=0; ch--) {
+		saveStack(ch, numNextSlices);
+	}
+	// Merge and save DAPI + Cell Type Marker
+	run("Bio-Formats Importer", "open=&path autoscale color_mode=Default view=Hyperstack stack_order=XYCZT series_"+s);
+	run("Split Channels");
+	nameSuffix = substring(getTitle(), 2);
+	DAPI_name = "C1" + nameSuffix;
+	for (ch=channels; ch>=2; ch--) {
+		currChName = "C" + d2s(ch,0) + nameSuffix;
+		selectWindow(currChName);
+		run("Z Project...", "projection=[Max Intensity]");
+		selectWindow(DAPI_name);
+		run("Z Project...", "projection=[Max Intensity]");
+		run("Merge Channels...", "c1=[MAX_" + currChName + "] c2=[MAX_" + DAPI_name + "] create");
+		out_path = out_dir + out_title + " - mergedDAPI+ch" + d2s(ch-1,0) + ".tif";
+		saveAs("tiff", out_path);
+	  }
+	// If there are any images still open, close all of them
+	while (nImages>0) { 
+          selectImage(nImages); 
+          close(); 
+      }
+	}
+}
+
+function saveStack(channel_number, times) { 
+	nextSlice(times);
+	run("Enhance Contrast", "saturated=0.35");
+	ch_string = d2s(channel_number,0);
+	filename = out_title + " - C=" + ch_string;
+	out_path = out_dir + filename + ".tif";
+	saveAs("tiff", out_path);
+	saveSlices(filename);
+}
+
+function saveSlices(filename) {
+	numSlices = nSlices();
+	run("Stack to Images");
+	for (currSlice=numSlices; currSlice>0; currSlice--){
+		// curr_title = getTitle();
+		// z_index = indexOf(curr_title, "z:");
+		// slash_index = indexOf(curr_title, "/", z_index);
+		// currSlice_string = substring(curr_title, z_index+2, slash_index);
+		// out_path = out_dir + filename + "-" + currSlice_string + ".tif";
+		out_path = out_dir + filename + "--" + d2s(currSlice,0) + ".tif";
+		saveAs("tiff", out_path);
+		close;
+	}
+}
+
+function nextSlice(times) { 
+	for (i=0; i<times; i++){
+		run("Next Slice [>]");
+	}
+}

@@ -1,0 +1,93 @@
+macro "Break up all LSM files in a directory into their individual TIFF, then enhance contrast and save them" {
+// open the file manager to select a lif file to break it into TIFFs
+// in this case, only the metadata specific to a series will be written
+
+path = File.openDialog("Select a File");
+
+run("Bio-Formats Macro Extensions");
+Ext.setId(path);
+Ext.getCurrentFile(file);
+Ext.getSeriesCount(seriesCount);
+
+// get all the files in the directory
+slash_index = lastIndexOf(path, "/");
+input_dir = substring(path, 0, slash_index+1);
+fileList = getFileList(input_dir);
+fileCount = fileList.length;
+out_dir = input_dir + "output/";
+
+for (f=0; f<fileCount; f++) {
+	fileName = fileList[f];
+	dot_index = lastIndexOf(fileName, ".");
+	if (dot_index == -1){
+		continue;
+	}
+	fileType = substring(fileName, dot_index, lengthOf(fileName));
+	if (fileType == ".lsm"){
+		open(input_dir + fileName);
+		out_title = getTitle();
+		getDimensions(w, h, channels, slices, frames);
+		run("Split Channels");
+		for (currCh=channels; currCh>0; currCh--){
+			saveStack(currCh-1, 0, channels);
+		}
+		saveMergedChannels();
+	}
+}
+
+function saveMergedChannels() { 
+	open(input_dir + fileName);
+	run("Split Channels");
+	// close the RNAscope image, since it won't be merged
+	close;
+	channelOneName = getTitle();
+	DAPI_name = "C1" + substring(channelOneName, 2);
+	channelTwoName = "C2" + substring(channelOneName, 2);
+	run("Z Project...", "projection=[Max Intensity]");
+	selectWindow(DAPI_name);
+	run("Z Project...", "projection=[Max Intensity]");
+	run("Merge Channels...", "c1=[MAX_" + channelOneName + "] c2=[MAX_" + DAPI_name + "] create");
+	out_path = out_dir + out_title + " - mergedDAPI+ch1.tif";
+	saveAs("tiff", out_path);
+	selectWindow(DAPI_name);
+	run("Z Project...", "projection=[Max Intensity]");
+	selectWindow(channelTwoName);
+	run("Z Project...", "projection=[Max Intensity]");
+	run("Merge Channels...", "c1=[MAX_" + channelTwoName + "] c2=[MAX_" + DAPI_name + "] create");
+	out_path = out_dir + out_title + " - mergedDAPI+ch2.tif";
+	saveAs("tiff", out_path);
+	while (nImages>0) { 
+          selectImage(nImages); 
+          close(); 
+      }
+}
+
+function saveStack(channel_number, times, numChannels) { 
+	// nextSlice(times);
+	// run("Enhance Contrast", "saturated=0.35");
+	ch_string = d2s(channel_number,0);
+	filename = out_title + " - C=" + ch_string;
+	out_path = out_dir + filename + ".tif";
+	saveAs("tiff", out_path);
+	txtFileName = out_dir + out_title + " - zplane_num.txt";
+	txt = File.open(txtFileName);
+	print(txt, d2s(slices,0));
+	File.close(txt);
+	saveSlices(filename);
+}
+
+function saveSlices(filename) {
+	numSlices = nSlices();
+	run("Stack to Images");
+	for (currSlice=numSlices; currSlice>0; currSlice--){
+		out_path = out_dir + filename + "--" + d2s(currSlice,0) + ".tif";
+		saveAs("tiff", out_path);
+		close;
+	}
+}
+
+function nextSlice(times) { 
+	for (i=0; i<times; i++){
+		run("Next Slice [>]");
+	}
+}

@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: starfish
+Version: 0.0.31
+Summary: Pipelines and pipeline components for the analysis of image-based transcriptomics data
+Home-page: UNKNOWN
+Author: Deep Ganguli
+Author-email: dganguli@chanzuckerberg.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Provides-Extra: napari

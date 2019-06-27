@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: nbencdec
+Version: 0.0.7
+Summary: Encode/decode Python Notebook files to .py files.
+Home-page: UNKNOWN
+Author: Tony Tung
+Author-email: ttung@chanzuckerberg.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

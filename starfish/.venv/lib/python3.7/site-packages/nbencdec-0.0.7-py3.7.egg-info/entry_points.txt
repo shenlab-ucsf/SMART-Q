@@ -1,0 +1,6 @@
+[console_scripts]
+nbencdec=nbencdec.cli:main
+
+[nbconvert.exporters]
+encoded_python = nbencdec.exporters:EncodedPythonExporter
+

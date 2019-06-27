@@ -1,0 +1,502 @@
+{
+    "default_tile_format": "TIFF",
+    "default_tile_shape": [
+        1024,
+        1024
+    ],
+    "dimensions": [
+        "zc",
+        "z",
+        "yc",
+        "c",
+        "y",
+        "r",
+        "x",
+        "xc"
+    ],
+    "extras": {},
+    "shape": {
+        "c": 1,
+        "r": 1,
+        "z": 17
+    },
+    "tiles": [
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z0-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 0
+            },
+            "sha256": "72b319118670932ec008d84d09815cd1aa0ba358709a2c4bc246e0739181024d",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z1-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 1
+            },
+            "sha256": "faaf281369e024803943a4dcb3bf591621b088bf5ed359853811adf657d40f12",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z2-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 2
+            },
+            "sha256": "21f2809caa805d2ccd7a31f4608b652b001b29110350e1976c8726f6fd3c1251",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z3-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 3
+            },
+            "sha256": "01ed06f23a4d9772a703f1316d79493be2bff9dedef385f18f40b1b0f7815911",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z4-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 4
+            },
+            "sha256": "9204e24cdf87827109728f3aaa3e17c41ebe705abba3c83b7da85c765d2e78ca",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z5-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 5
+            },
+            "sha256": "1f46785aff0b7ccb55cd01395749a7f0a7cc6695ebfd17cf867884530013c1a3",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z6-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 6
+            },
+            "sha256": "cd9b83a2300c08c1b68e53e30a950bb2a8271d4f741ee70444030f17903a6a9c",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z7-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 7
+            },
+            "sha256": "bdd714968e78f408da4b68f74b1aaeafe4e244d7ec749a58f600f1157ade23fc",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z8-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 8
+            },
+            "sha256": "3e296f1daba4287562b1e88c49ed7eb7a6052a4a6247795f76e5f29767a41333",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z9-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 9
+            },
+            "sha256": "e7dbb980c902a59087623ec133712bf065e5de252430c64d2922059d6cbc45b9",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z10-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 10
+            },
+            "sha256": "16bcdc7e909d8090f9642fbd53a61cc420fcaea315f8ea8fc4b9ac79e3618ced",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z11-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 11
+            },
+            "sha256": "ec5b5786950238b7fa9349244cf20d56f71e172b8f7ab18eecdeccf7122c13c8",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z12-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 12
+            },
+            "sha256": "e4a6497e2478ff18b13ef6b3a12c79336a43530bf529bc5e2cae844683edda70",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z13-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 13
+            },
+            "sha256": "e52149951075e8ec4032c8fee198a3bd015a4e928599d42db22615ec2a2ea9a2",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z14-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 14
+            },
+            "sha256": "d5c900ed3e0cb1f0fa05263626cc69835320390b93bffe24f07f2e142de9bea2",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z15-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 15
+            },
+            "sha256": "7eab3bd358385b2eb4a2c0608465d88b408a826458af6e78a14d38f87cab957c",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        },
+        {
+            "coordinates": {
+                "xc": [
+                    0.0,
+                    0.0001
+                ],
+                "yc": [
+                    0.0,
+                    0.0001
+                ],
+                "zc": [
+                    0.0,
+                    0.0001
+                ]
+            },
+            "file": "nuclei-fov_000-Z16-H0-C0.tiff",
+            "indices": {
+                "c": 0,
+                "r": 0,
+                "z": 16
+            },
+            "sha256": "a5555c46dd677f8843878edfd2e96ca4e771bc2f363470492d552713440280dc",
+            "tile_format": "TIFF",
+            "tile_shape": [
+                1024,
+                1024
+            ]
+        }
+    ],
+    "version": "0.0.0"
+}

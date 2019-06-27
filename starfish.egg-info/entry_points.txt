@@ -1,0 +1,3 @@
+[console_scripts]
+starfish = starfish.starfish:starfish
+

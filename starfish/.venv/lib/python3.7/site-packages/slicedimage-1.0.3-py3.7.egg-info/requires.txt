@@ -1,0 +1,9 @@
+diskcache
+packaging
+numpy
+requests
+scikit-image
+six
+
+[:python_version < "3.4"]
+enum34

@@ -1,5 +1,5 @@
 MANIFEST.in
-README.rst
+README.md
 REQUIREMENTS.txt
 setup.py
 sptx_format/__init__.py
@@ -57,6 +57,9 @@ starfish/codebook/_format.py
 starfish/codebook/codebook.py
 starfish/config/__init__.py
 starfish/data/__init__.py
+starfish/data/starfish_experiment.py
+starfish/data/starfish_experiment_jupyter.py
+starfish/data/starfish_experiment_jupyter2.py
 starfish/display/__init__.py
 starfish/display/stack.py
 starfish/experiment/__init__.py

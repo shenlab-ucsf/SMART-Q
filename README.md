@@ -6,7 +6,6 @@ Single molecular FISH (smFISH) experiments, such as RNAscope is critical for ana
 
 SMART-Q is a modular and customizable pipeline processing single molecule FISH data with much-improved efficiency and accuracy compared to the existing methods. It has new features that allow analyzing immunostaining signals and FISH signals simultaneously to achieve cell type-specific transcription analysis. SMART-Q is an efficient analysis tool for studying gene expression patterns in complex tissue and primary cell samples. 
 
-For more detailed instructions about the pipeline, please see the SMART-Q Manual.docx.
 
 ### Installation
 
@@ -71,3 +70,6 @@ echo "export PATH=/Users/sethb/SMART-Q/.venv/bin:$PATH" >> ~/.bash_profile
 ```
 
 Finally, if you do not already have Fiji, download it from https://imagej.net/Fiji/Downloads.
+
+For more detailed instructions about the pipeline, please see the SMART-Q Manual.docx.
+
